@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{71B2FBCE-04B8-4D1D-86AD-28C644DB7D23}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC70.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(OPENCV)\include\opencv;$(OPENCV)\modules\ml\include;$(OPENCV)\modules\video\include;$(OPENCV)\modules\highgui\include;$(OPENCV)\modules\imgproc\include;$(OPENCV)\modules\legacy\include;$(OPENCV)\modules\objdetect\include;$(OPENCV)\modules\calib3d\include;$(OPENCV)\modules\flann\include;$(OPENCV)\modules\features2d\include;$(OPENCV)\modules\core\include;$(OPENCV)\modules\contrib\include;$(ENCARA2)\include\others;$(ENCARA2)\include;$(OPENCV)\apps\HaarTraining\include;$(OPENCV)\cvaux\include;$(OPENCV)\cxcore\include;$(OPENCV)\cv\include;$(OPENCV)\otherlibs\highgui;$(OPENCV)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(ProjectDir)/../lib/ENCARA2.2d.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(OPENCV)\include\opencv;$(OPENCV)\modules\video\include;$(OPENCV)\modules\highgui\include;$(OPENCV)\modules\imgproc\include;$(OPENCV)\modules\legacy\include;$(OPENCV)\modules\objdetect\include;$(OPENCV)\modules\calib3d\include;$(OPENCV)\modules\flann\include;$(OPENCV)\modules\features2d\include;$(OPENCV)\modules\core\include;$(OPENCV)\modules\ml\include;$(OPENCV)\modules\contrib\include;$(ENCARA2)\include\others;$(ENCARA2)\include;$(OPENCV)\apps\HaarTraining\include;$(OPENCV)\cvaux\include;$(OPENCV)\cxcore\include;$(OPENCV)\cv\include;$(OPENCV)\otherlibs\highgui;$(OPENCV)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(ProjectDir)/../lib/ENCARA2.2d.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(OPENCV)\include\opencv;$(OPENCV)\modules\ml\include;$(OPENCV)\modules\video\include;$(OPENCV)\modules\highgui\include;$(OPENCV)\modules\imgproc\include;$(OPENCV)\modules\legacy\include;$(OPENCV)\modules\objdetect\include;$(OPENCV)\modules\calib3d\include;$(OPENCV)\modules\flann\include;$(OPENCV)\modules\features2d\include;$(OPENCV)\modules\core\include;$(OPENCV)\modules\contrib\include;$(ENCARA2)\include\others;$(ENCARA2)\include;$(OPENCV)\apps\HaarTraining\include;$(OPENCV)\cvaux\include;$(OPENCV)\cxcore\include;$(OPENCV)\cv\include;$(OPENCV)\otherlibs\highgui;$(OPENCV)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(ProjectDir)/../lib/ENCARA2.2.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(OPENCV)\include\opencv;$(OPENCV)\modules\video\include;$(OPENCV)\modules\highgui\include;$(OPENCV)\modules\imgproc\include;$(OPENCV)\modules\legacy\include;$(OPENCV)\modules\objdetect\include;$(OPENCV)\modules\calib3d\include;$(OPENCV)\modules\flann\include;$(OPENCV)\modules\features2d\include;$(OPENCV)\modules\core\include;$(OPENCV)\modules\ml\include;$(OPENCV)\modules\contrib\include;$(ENCARA2)\include\others;$(ENCARA2)\include;$(OPENCV)\apps\HaarTraining\include;$(OPENCV)\cvaux\include;$(OPENCV)\cxcore\include;$(OPENCV)\cv\include;$(OPENCV)\otherlibs\highgui;$(OPENCV)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(ProjectDir)/../lib/ENCARA2.2.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CWarpingImage.cpp" />
+    <ClCompile Include="..\src\ENCARA2_2lib.cpp" />
+    <ClCompile Include="..\src\PCAUtils.cpp" />
+    <ClCompile Include="..\src\svm.cpp" />
+    <ClCompile Include="..\src\SVMUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ColorSpaces.h" />
+    <ClInclude Include="..\include\CWarpingImage.h" />
+    <ClInclude Include="..\include\Dataset.h" />
+    <ClInclude Include="..\include\DatasetProjections.h" />
+    <ClInclude Include="..\include\DebugLog.h" />
+    <ClInclude Include="..\include\ENCARA2_2lib.h" />
+    <ClInclude Include="..\include\ENCARA2_2lib_defs.h" />
+    <ClInclude Include="..\include\FacialData.h" />
+    <ClInclude Include="..\include\GaborW.h" />
+    <ClInclude Include="..\include\ImageUtils.h" />
+    <ClInclude Include="..\include\IplImageUtils.h" />
+    <ClInclude Include="..\include\LBP.h" />
+    <ClInclude Include="..\include\MathUtils.h" />
+    <ClInclude Include="..\include\others\OpenTracking.h" />
+    <ClInclude Include="..\include\PCA.h" />
+    <ClInclude Include="..\include\PCAUtils.h" />
+    <ClInclude Include="..\include\SkinBlob.h" />
+    <ClInclude Include="..\include\svm.h" />
+    <ClInclude Include="..\include\SVMUtils.h" />
+    <ClInclude Include="..\include\Tracking_defs.h" />
+    <ClInclude Include="..\include\ucs.h" />
+    <ClInclude Include="..\include\ViolaJonesDetectorInterface.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

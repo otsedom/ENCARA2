@@ -1,0 +1,2 @@
+v2.11
+Adapted to OpenCV 2.3.1

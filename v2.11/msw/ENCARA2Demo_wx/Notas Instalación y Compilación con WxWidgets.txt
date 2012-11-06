@@ -1,0 +1,35 @@
+Pasos realizados en Windows XP con Visual .NET 2005 (versión en inglés)
+
+- Descargar de wxwidgets.org la versión para Windows
+
+- Compilar el proyecto $(DIRECTORIO_DE_INSTALACION_WXWIDGETS)\build\msw\wx en modos por ejemplo Debug, Release, Debug Unicode y Release Unicode. Este 
+aspecto es importante para luego elegir nuestro proyecto demo y el modo en que usaremos wxwidgets (Unicode, multibytes ...)
+
+- Debe crear lib\vc_lib A partir de ahí los ejemplos deberían compilar (utilizando uno de los modos utilizados en el paso anterior).
+
+- Para crear nuestro propio proyecto Visual
+
+	* Crear proyecto tipo Win32
+	* En Application Settings, escoger Empty Project
+	* Si ya tengo ficheros, simplemente los añado al proyecto
+	* Para compilar es habitual tener que indicar las rutas donde se encuentran los ficheros include y las bibliotecas
+		
+		+ Rutas de ficheros include: Properties->Configuration Properties->C/C++->General->Additional Include Directories
+
+			Por ejemplo, en mi ordenador tuve que introducir (tanto en versión Debug como Release):
+				"C:\wxWidgets-2.8.7\include\msvc";"C:\wxWidgets-2.8.7\include"
+
+		+ Rutas de ficheros biblioteca: Properties->Configuration Properties->Linker->General->Additional Library Directories
+
+			Por ejemplo, en mi ordenador tuve que introducir (tanto en versión Debug como Release):
+				"C:\wxWidgets-2.8.7\lib\vc_lib"
+
+			Además tuve que incluir dos libs adicionales:
+				comctl32.lib rpcrt4.lib
+
+
+- Tras realizar estos pasos no tuve problema para crear un nuevo proyecto y ejecutarlo a partir de miprueba.cpp. Sólo indicar que pudieras necesitar
+añadir la ruta de alguna dll en tu variable de entorno PATH, en el caso de que la ejecución se aborte porque no encuentra alguna.
+
+Un ejemplo muy sencillo con diálogos
+Un ejemplo http://wiki.wxwidgets.org/Writing_Your_First_Application-Common_Dialogs

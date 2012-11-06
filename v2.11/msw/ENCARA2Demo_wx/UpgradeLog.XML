@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="ENCARA2Demo_wx">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Modesto\Mis documentos\FACES\ENCARA2Demo_wx\ENCARA2Demo_wx.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\Modesto\Mis documentos\FACES\ENCARA2Demo_wx\ENCARA2Demo_wx.suo">
+</Property><Property Name="Date" Value="jueves, 28 de mayo de 2009">
+</Property><Property Name="Time" Value="16:50">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="ENCARA2Demo_wx.sln" Description="File successfully backed up as C:\Documents and Settings\Modesto\Mis documentos\FACES\ENCARA2Demo_wx\ENCARA2Demo_wx.sln.old">
+</Event><Event ErrorLevel="0" Project="" Source="ENCARA2Demo_wx.suo" Description="File successfully backed up as C:\Documents and Settings\Modesto\Mis documentos\FACES\ENCARA2Demo_wx\ENCARA2Demo_wx.suo.old">
+</Event><Event ErrorLevel="0" Project="ENCARA2Demo_wx" Source="ENCARA2Demo_wx\ENCARA2Demo_wx.vcproj" Description="Web deployment to the local IIS server is no longer supported. The Web Deployment build tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="ENCARA2Demo_wx" Source="ENCARA2Demo_wx\ENCARA2Demo_wx.vcproj" Description="This application has been updated to include settings related to the User Account Control (UAC) feature of Windows Vista. By default, when run on Windows Vista with UAC enabled, this application is marked to run with the same privileges as the process that launched it. This marking also disables the application from running with virtualization. You can change UAC related settings from the Property Pages of the project.">
+</Event><Event ErrorLevel="0" Project="ENCARA2Demo_wx" Source="ENCARA2Demo_wx\ENCARA2Demo_wx.vcproj" Description="Project file successfully backed up as 'C:\Documents and Settings\Modesto\Mis documentos\FACES\ENCARA2Demo_wx\ENCARA2Demo_wx\ENCARA2Demo_wx.vcproj.8.00.old'.">
+</Event><Event ErrorLevel="0" Project="ENCARA2Demo_wx" Source="ENCARA2Demo_wx\ENCARA2Demo_wx.vcproj" Description="Project upgraded successfully.">
+</Event><Event ErrorLevel="3" Project="ENCARA2Demo_wx" Source="ENCARA2Demo_wx\ENCARA2Demo_wx.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="ENCARA2Demo_wx.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="ENCARA2Demo_wx.sln" Description="Converted">
+</Event></UpgradeLog>
