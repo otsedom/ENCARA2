@@ -1031,10 +1031,10 @@ public:
 			totalpersistence+=Exemplars.persistence[j];
 		}
 
-printf("%d\n", totalpersistence);
+
 		if (Clasif->boSVMAvailable && totalpersistence>0)
 		{
-printf("Disponible\n");
+
 			int nclases=Clasif->ModelSVMGeneral->NumClasses;
 			//Aloja un vector para acumular las probabilidades de asociación a una clase
 			claseslk=(float *) new unsigned char[sizeof(float)*nclases];
