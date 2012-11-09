@@ -1,3 +1,0 @@
-svm.o: \
- /home/mcastrillon/FACES/ENCARA2-SourceForge/v2.10/linux/src/svm.cpp \
- /home/mcastrillon/FACES/ENCARA2-SourceForge/v2.10/linux/include/svm.h

@@ -1,3 +1,7 @@
+ENCARA2 is a multiple face detector available openly available under the GNU GPL license making use of the OpebCV library. This face detector has been developed at the SIANI institute in the University of Las Palmas de Gran Canaria.
+
+For more details  check http://new-mozart.dis.ulpgc.es/encara2
+
 Reference:
 "ENCARA2: Real-time Detection of Multiple Faces at Different Resolutions in Video Streams"
 M. Castrillón, O. Déniz, C. Guerra, M. Hernández

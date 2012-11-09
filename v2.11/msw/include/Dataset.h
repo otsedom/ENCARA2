@@ -143,14 +143,14 @@ private:
 		glob_t fi;
 
 		//Indica el número de posiciones que aloja
-		fi.gl_offs=MAXFILES;
+		fi.gl_offs=0;
 
-		glob("*.Ipl", GLOB_DOOFFS, NULL, &fi);
+		glob("*.Ipl", 0, NULL, &fi);
 
 		//If not checks for jpg
 		if ((int)fi.gl_pathc==0)
 		{
-			glob("*.jpg", GLOB_DOOFFS, NULL, &fi);
+			glob("*.jpg", 0, NULL, &fi);
 			bojpg=true;
 		}
 
@@ -199,17 +199,17 @@ private:
 		}
 	#else
 		//Indica el número de posiciones que aloja
-		fi.gl_offs=MAXFILES;
+		fi.gl_offs=0;
 
 
 		if (bojpg)
-			glob("*.jpg", GLOB_DOOFFS, NULL, &fi);
+			glob("*.jpg", 0, NULL, &fi);
 		else
 		{
 			if (bopng)
-				glob("*.png", GLOB_DOOFFS, NULL, &fi);
+				glob("*.png", 0, NULL, &fi);
 			else
-				glob("*.Ipl", GLOB_DOOFFS, NULL, &fi);
+				glob("*.Ipl", 0, NULL, &fi);
 		}
 
 		for (i=0;i<(int)fi.gl_pathc;i++)
@@ -418,29 +418,30 @@ private:
 
 		//Investiga el número de directorios
 		//Indica el número de posiciones que aloja
-		ff.gl_offs=MAXFILES;
+		ff.gl_offs=0;//MAXFILES;
 
-		glob("*", GLOB_DOOFFS, NULL, &ff);
+		glob("*", 0, NULL, &ff);
 
 		if ((int)ff.gl_pathc!=0)
 		{
 			//Total de clases
 			NumClasses+=(int)ff.gl_pathc;
-
-			for (nclas=0;nclas<(int)fi.gl_pathc;nclas++)
+			
+			for (nclas=0;nclas<(int)ff.gl_pathc;nclas++)
 			{
-				//Desciende a la carpeta
+			      //Desciende a la carpeta
 				chdir(ff.gl_pathv[nclas]);
-
+				
 				//Indica el número de posiciones que aloja
-				fi.gl_offs=MAXFILES;
+				fi.gl_offs=0;//MAXFILES;
 
-				glob("*.Ipl", GLOB_DOOFFS, NULL, &fi);
+				//glob("*.Ipl", GLOB_DOOFFS, NULL, &fi);
+				glob("*.Ipl", 0, NULL, &fi);
 
 				//If not checks for jpg
 				if ((int)fi.gl_pathc==0)
 				{
-					glob("*.jpg", GLOB_DOOFFS, NULL, &fi);
+					glob("*.jpg", 0, NULL, &fi);
 					bojpg=true;
 				}
 
@@ -479,7 +480,7 @@ private:
 		Label=(char**) new unsigned char[TotalImages*sizeof(char*)];
 
 		//Ahora tras saber lo que hay y cerrar las estructuras, lee las imágenes
-		c=0;
+		c=0;  //class index
 		unsigned int Frame=0;
 
 
@@ -570,38 +571,33 @@ private:
 			} while (_findnext(l, &fi)==0);
 
 			_findclose(l);
-
-
 		}
 #else//Falta completar, lo he copiado de Dataset
 		//Indica el número de posiciones que aloja
-		ff.gl_offs=MAXFILES;
+		ff.gl_offs=0;
 
-		glob("*", GLOB_DOOFFS, NULL, &ff);
+		glob("*", 0, NULL, &ff);
 
 		if ((int)ff.gl_pathc!=0)
 		{
-			//Total de clases
-			NumClasses+=(int)ff.gl_pathc;
-
 			for (nclas=0;nclas<(int)ff.gl_pathc;nclas++)
 			{
 				int nsams;
 
 				c++;
-
+				
 				//Desciende a la carpeta
 				chdir(ff.gl_pathv[nclas]);
 
 				j=0;
 
 				//Indica el número de posiciones que aloja
-				fi.gl_offs=MAXFILES;
+				fi.gl_offs=0;
 
 				if (!bojpg)
-					glob("*.Ipl", GLOB_DOOFFS, NULL, &fi);
+					glob("*.Ipl", 0, NULL, &fi);
 				else
-					glob("*.jog", GLOB_DOOFFS, NULL, &fi);
+					glob("*.jpg", 0, NULL, &fi);
 
 				for (nsams=0;nsams<(int)fi.gl_pathc;nsams++)
 				{
@@ -617,7 +613,7 @@ private:
 
 
 					Label[Frame]=(char*)new unsigned char[sizeof(char)*ID_STRING_SIZE];
-					strcpy(Label[Frame],fi.gl_pathv[nsams]);
+					strcpy(Label[Frame],ff.gl_pathv[nclas]);
 
 					Frame++;
 

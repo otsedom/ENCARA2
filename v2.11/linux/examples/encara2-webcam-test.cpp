@@ -20,7 +20,7 @@ using namespace cv;
 IplImage* pIplImage;
 char ENCARAdataDir[256]; //Detector data path
 CENCARA2_2Detector *ENCARAFaceDetector=NULL; //Detector
-CFacialDataperImage FacialData; //Detection data
+CFacialDataperImage *FacialData; //Detection data
 //ENCARA2 variables end
 
 int main( int argc, const char** argv )
@@ -78,6 +78,7 @@ int main( int argc, const char** argv )
 		
             	//ENCARA2 detection output
             	ENCARAFaceDetector->PaintFacialData(iplImg,CV_RGB(0,255,0));
+
 	    }
            
 	    cvShowImage("result",iplImg);
